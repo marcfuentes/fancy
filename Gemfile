@@ -23,6 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'devise'
+gem "cancan"
 gem 'jquery-rails'
 gem "better_errors", ">= 0.7.2", :group => :development
 gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]

@@ -1,9 +1,4 @@
-
-<p id="notice"><%= notice %></p>
-
 <div class="container">
-
-
 
 <p>
  
@@ -12,11 +7,25 @@
 
 <p>
 
-  <%= image_tag(@post.picture_url, :width => 800) if @post.picture.present? %>
+  <%= image_tag(@post.picture_url, :width => '70%') if @post.picture.present? %>
 </p>
 
+<%= link_to 'Volver', posts_path, :class => 'btn btn-info' %>
+<%= link_to 'Editar', edit_post_path(@post), :class => 'btn btn-info' %> 
+<%= link_to 'Borrar', @post, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-info' %> 
 
-<%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %> 
-<%= link_to 'Back', posts_path, :class => 'btn' %>
-<%= link_to 'Destroy', @post, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-danger' %> 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=504323752911178";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="fb-comments" data-href="http://example.com" data-width="470" data-num-posts="2"></div>
+
+
 </div>

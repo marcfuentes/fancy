@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
- 
+
+  before_filter :authenticate_user!, :except => [:show, :index] 
   # GET /posts
   # GET /posts.json
   def index
+
+    
     @posts = Post.all
 
     respond_to do |format|
@@ -26,8 +29,6 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
-
-    
 
     respond_to do |format|
       format.html # new.html.erb

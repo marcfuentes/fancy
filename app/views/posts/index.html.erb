@@ -4,14 +4,15 @@
 
 <% @posts.each do |post| %>
 <div class="container">
+
+	<h3><%= link_to post.title, post %></h3>
   
     <%= image_tag post.picture_url, :width => '50%' if post.picture.present?%> 
 
-    <h3><%= link_to post.title, post %></h3>
+    
     
   </div>
 <% end %>
 
 
 <br />
-
