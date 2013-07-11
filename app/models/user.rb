@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   require 'role_model'
 
-  has_many :posts
+  has_many :posts, :dependent => :destroy
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
