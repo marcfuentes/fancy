@@ -12,7 +12,10 @@ class Ability
     if user.admin?
          can :manage, :all
     #   else
-    #     can :read, :all
+    #    can :read, :all
+    elsif user.has_role? :user
+
+    can [:read, :create, :update], post
     end
     #
     # The first argument to `can` is the action you are giving the user 

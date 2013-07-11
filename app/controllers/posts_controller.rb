@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+  
+
+
   before_filter :authenticate_user!, :except => [:show, :index] 
   # GET /posts
   # GET /posts.json
@@ -28,7 +31,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @post = Post.new
+    @post = current_user.posts.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,13 +42,13 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @post = current_user.posts.new(params[:post])
 
     respond_to do |format|
       if @post.save
@@ -61,7 +64,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
-    @post = Post.find(params[:id])
+    @post = current_user.post.find(params[:id])
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
