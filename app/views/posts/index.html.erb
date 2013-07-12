@@ -6,7 +6,7 @@
 
 
 
-<% @posts.each do |post| %>
+<% @posts.reverse_each do |post| %>
 <div class="container">
 
 	<h3><%= link_to post.title, post %></h3>
