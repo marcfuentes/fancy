@@ -4,6 +4,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-
+ActiveSupport::Deprecation.silenced = true
 
 Gag::Application.load_tasks
