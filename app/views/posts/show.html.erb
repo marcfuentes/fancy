@@ -1,18 +1,14 @@
+<div class="container">
 <div class="row">
-    <div class="span11 offset5">
+    <div class="span6 offset3">
         <div class="well well large">
 
-<p>
-   <h2>Posteado por @<%= @post.user.name %></h2>
-  <h2><%= @post.title %></h2>
-</p>
+   <h4>Posteado por @<%= @post.user.name %></h4>
+  
 
-<p>
+  <%= image_tag(@post.picture_url, :width => '100%') if @post.picture.present? %>
 
-  <%= image_tag(@post.picture_url, :width => '70%') if @post.picture.present? %>
-</p>
-
-
+<h2><%= @post.title %></h2>
 
 
 <% if current_user == @post.user %>
@@ -23,11 +19,11 @@
 </p>
 
 <% end %>
-<%= link_to 'Volver', posts_path, :class => 'btn btn-info' %>
+<%= link_to 'Volver', posts_path, :class => 'btn btn-primary' %>
 </div>
     </div>
 </div>
-    
+</div>    
 
 
 
