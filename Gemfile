@@ -14,7 +14,6 @@ end
 group :production do
   gem 'pg'
 end
-
 group :production do
   gem 'thin'
 end
@@ -28,11 +27,6 @@ group :assets do
   gem 'bootstrap-sass-extras'
   gem 'bootswatch-rails'
  
-
-  
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -42,6 +36,7 @@ gem "role_model"
 gem 'jquery-rails'
 gem "better_errors", ">= 0.7.2", :group => :development
 gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
+gem 'quiet_assets', :group => :development
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
