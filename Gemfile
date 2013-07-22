@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 
 gem 'simple_form'
 gem 'carrierwave'
+gem 'acts_as_commentable_with_threading'
+
 group :development, :test do
 gem 'sqlite3'
 end
@@ -26,7 +28,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass-extras'
   gem 'bootswatch-rails'
- 
   gem 'uglifier', '>= 1.0.3'
 end
 

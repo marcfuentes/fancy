@@ -1,4 +1,7 @@
 <div class="container">
+<div class="row">
+    <div class="span6 offset3">
+        <div class="well well large">
 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -19,7 +22,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", :class => 'btn btn-primary'  %>
   </div>
 <% end %>
 
@@ -29,3 +32,7 @@
 
 <%= link_to "Back", :back %>
 </div>
+</div>
+ </div>
+</div>
+    

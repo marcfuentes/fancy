@@ -1,28 +1,32 @@
 <div class="container">
-<div class="row">
+  <div class="row">
+
+          
+
     <div class="span6 offset3">
         <div class="well well large">
 
-   <h4>Posteado por @<%= @post.user.name %></h4>
+           <h4>Posteado por @<%= @post.user.name %></h4>
+
+           <td><%= image_tag avatar_url(@post.user), :class =>'img-circle' %></td>
   
 
-  <%= image_tag(@post.picture_url, :width => '100%') if @post.picture.present? %>
+             <%= image_tag(@post.picture_url, :width => '100%') if @post.picture.present? %>
 
-<h2><%= @post.title %></h2>
+             <h2><%= @post.title %></h2>
 
 
-<% if current_user == @post.user %>
+             <% if current_user == @post.user %>
+             <p>
+              <%= link_to 'Editar', edit_post_path(@post), :class => 'btn btn-info' %> 
+              <%= link_to 'Borrar', @post, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-info' %> 
+             </p>
+            <% end %>
 
-<p>
-<%= link_to 'Editar', edit_post_path(@post), :class => 'btn btn-info' %> 
-<%= link_to 'Borrar', @post, confirm: 'Are you sure?', method: :delete, :class => 'btn btn-info' %> 
-</p>
-
-<% end %>
-<%= link_to 'Volver', posts_path, :class => 'btn btn-primary' %>
-</div>
+            <%= link_to 'Volver', posts_path, :class => 'btn btn-primary' %>
+        </div>
     </div>
-</div>
+   </div>
 </div>    
 
 

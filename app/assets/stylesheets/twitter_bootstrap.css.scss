@@ -1,10 +1,14 @@
 // First import Bootswatch theme variables http://bit.ly/KIu8IN
-@import 'bootswatch/flatly/variables';
+@import 'bootswatch/amelia/variables';
 
 // Use Twitter Bootstrap
 @import 'bootstrap';
 
+body { padding-top: 60px; }
+
+
+
 @import "bootstrap-responsive";
 
 // And finally Bootswatch style
-@import "bootswatch/flatly/bootswatch"
+@import "bootswatch/amelia/bootswatch"

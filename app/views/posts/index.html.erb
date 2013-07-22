@@ -1,6 +1,6 @@
 <div class="container">
 <ul class="thumbnails">
-	<div class="row">
+  <div class="row">
     <div class="span6 offset3">
         <div class="well">
 
@@ -9,7 +9,7 @@
 <% @posts.reverse_each do |post| %>
 
 
-	<h3><%= link_to post.title, post %></h3>
+  <h3><%= link_to post.title, post %></h3>
   
     <%= image_tag post.picture_url, :width => '100%' if post.picture.present?%> 
 
