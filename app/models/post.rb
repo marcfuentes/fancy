@@ -1,16 +1,19 @@
 class Post < ActiveRecord::Base
 
+  attr_accessible :picture, :title
+
   validates_presence_of :picture, :title
 
   validates :user_id, presence: true
 
   belongs_to :user
+
+  has_many :comments
   
-  attr_accessible :picture, :title
 
   mount_uploader :picture, PictureUploader
 
-  acts_as_commentable
+  
 
   
 end

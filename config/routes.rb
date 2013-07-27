@@ -1,4 +1,10 @@
 Gag::Application.routes.draw do
+  resources :comments
+  resources :posts  do
+
+     resources :comments
+  end
+
   devise_for :admins
 
   devise_for :users

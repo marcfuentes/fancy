@@ -25,6 +25,23 @@
 
 
             <%= link_to 'Volver', posts_path, :class => 'btn btn-primary' %>
+
+            <h4>Comments</h4>
+              <div id="comments">
+                <% render :partial => @post.comments %>
+              </div>
+              <%= simple_form_for [@post, Comment.new] do |f| %>
+              <p>
+                 <%= f.input :body, :label => "New Comment", as: :text, input_html: 
+                 { rows: "3" } %>
+              </p>
+              <p><%= f.submit "Add Comment", class: "btn btn-primary" %></p>
+            <% end %>
+            
+          </div>
+        </div>
+
+
         </div>
     </div>
    </div>

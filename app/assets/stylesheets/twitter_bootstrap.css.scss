@@ -1,5 +1,5 @@
 // First import Bootswatch theme variables http://bit.ly/KIu8IN
-@import 'bootswatch/amelia/variables';
+@import 'bootswatch/journal/variables';
 
 // Use Twitter Bootstrap
 @import 'bootstrap';
@@ -11,4 +11,4 @@ body { padding-top: 40px; }
 @import "bootstrap-responsive";
 
 // And finally Bootswatch style
-@import "bootswatch/amelia/bootswatch"
+@import "bootswatch/journal/bootswatch"

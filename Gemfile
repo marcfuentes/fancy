@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 
 gem 'simple_form'
 gem 'carrierwave'
-gem 'acts_as_commentable_with_threading'
+
 
 group :development, :test do
 gem 'sqlite3'
