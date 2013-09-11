@@ -6,9 +6,7 @@
     <div class="span6 offset3">
         <div class="well well large">
 
-           <h4>Posteado por @<%= @post.user.name %></h4>
-
-           <td><%= image_tag avatar_url(@post.user), :class =>'img-circle' %></td>
+          
   
 
              <%= image_tag(@post.picture_url, :width => '100%') if @post.picture.present? %>
@@ -24,18 +22,18 @@
             <% end %>
 
 
-            <%= link_to 'Volver', posts_path, :class => 'btn btn-primary' %>
+           
 
-            <h4>Comments</h4>
+            <h4>Comentarios</h4>
               <div id="comments">
-                <% render :partial => @post.comments %>
+                <%= render :partial => @post.comments %>
               </div>
               <%= simple_form_for [@post, Comment.new] do |f| %>
-              <p>
-                 <%= f.input :body, :label => "New Comment", as: :text, input_html: 
+              <h2>
+                 <%= f.input :body, :label => "Nuevo Comentario", as: :text, input_html: 
                  { rows: "3" } %>
-              </p>
-              <p><%= f.submit "Add Comment", class: "btn btn-primary" %></p>
+              </h2>
+              <p><%= f.submit "Agrega Comentario", class: "btn btn-primary" %></p>
             <% end %>
             
           </div>
@@ -47,5 +45,5 @@
    </div>
 </div>    
 
-
+ <%= link_to 'Volver', posts_path, :class => 'btn btn-primary' %>
 
